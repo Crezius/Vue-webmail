@@ -1,9 +1,203 @@
+#Connexion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+	text-align:center;
+    height: 5vh;
+    background-color: #aaa;
+    box-shadow: 2px 3px 5px 0px #656565;
+	padding-top:0.5%;
+	padding-bottom:0.5%;
+	margin-bottom:2vh;
+}
 
-div {
+h1 {
+    color: #fefefe;
+    font-weight: 1000;
+    font-size: 25pt;
+    font-family: monospace;
+}
+
+#form_connexion {
+    margin-top: 20;
+}
+
+#creation_mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 5vh;
+    box-shadow: 2px 3px 5px 0px #656565;
+    background-color: #aaa;
+	margin-bottom:2vh;
+    padding-top:0.5%;
+	padding-bottom:0.5%;
+}
+
+#envoi{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#_Destinataire {
+    display: flex;
+    flex-direction: row;
+	float:left;
+	width:20%
+}
+#_Message {
+    display: flex;
+    flex-direction: row;
+	float:right;
+	width:60%;
+}
+
+#message, #dest, #btnEnvoyer {
+    margin-left: 5px;    
+}
+
+#btnEnvoyer
+{
+	float:right;
+}
+#gauche {
+	float:left;
+	width:30%;
+	padding-left: 1vw;
+
+}
+#droite {
+    position: relative;
+	float: right;
+	width:55%;
+	background-color: #66F6;
+	height:75%;
+    box-shadow: 2px 3px 5px 0px #656565;
+	padding:5%;
+}
+
+.croixgauche,
+.croixdroite {
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 20px;
+  border-radius: 2px;
+  background: red;
+}
+
+.croixgauche {
+    transform: rotate(-45deg);
+    top: -1;
+    right: 5;
+    transform-origin: 20px 2px;
+}
+
+.croixdroite {
+    transform: rotate(45deg);
+    top: 9;
+    right: 5;
+    transform-origin: 20px 2px;
+}
+
+.liste_mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 2px 3px 5px 0px #656565;
+    padding: 0vh 1vh; 
+    height: 10vh;
+}
+
+#listeMail{
+	float:left;
+    width: 15vw;
+	text-decoration:none;
+	color:black;
+}
+ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+li{			
+	width:100%;
+	margin:1%;
+}
+html{
+	font-family:calibri;
+	background-color:silver;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #blue;
+}
+
+body > * {
+    display: block;
+    position: absolute;
+}
+
+
+.block {
+    
+    position: relative;
+    /*background-color: #aaa;*/
+    : 2vh;
+    
+}
+
+.header {
+    
+    display: flex;
+    flex-direction: row;
+    padding: 2vh;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+.input-text {
+    height: 30px;
+    width: 300px;
+}
+
+.ajout {
+    
+   
+    
+}
+
+.strobo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0.5;
 }
 
 button {
@@ -19,5 +213,12 @@ p {
     font-size: 40pt;
     font-family: monospace;
 }
+
+
+
+
+
+
+
 
 
