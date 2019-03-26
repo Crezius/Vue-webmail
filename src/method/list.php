@@ -1,6 +1,12 @@
+
+
+
+
+
+
 <?php 
             
-            //Info base
+            //Info bases
             $dbhost = "localhost";
             $dbuser = "me";
             $dbpass = "mdp";
