@@ -4,7 +4,9 @@
     
     <div>
         <TopBarre/>
+        <UnderTopBar/>
         <List/>
+        <Message/>
     </div>
     
 </template>
@@ -14,7 +16,8 @@
 
     import TopBarre from './components/TopBarre.vue';
     import List     from './components/List.vue'
-    
+    import UnderTopBar  from './components/UnderTopBar.vue'
+    import Message  from './components/Message_details.vue'
 
     export default {
     
@@ -22,6 +25,8 @@
       components: {
         TopBarre,
         List,
+        UnderTopBar,
+        Message,
       },
         
     };
@@ -103,8 +108,6 @@
         
         
 		
-		
-
 		<div>
            
 				<liste/>

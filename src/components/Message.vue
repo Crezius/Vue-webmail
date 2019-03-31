@@ -1,11 +1,11 @@
 <template>
 
-
+<!--
     <li>
         {{msg.id}} {{msg.title}}
     </li>
-    
-    <!--<div id="liste_mail" class="liste_mail">
+    -->
+    <div id="liste_mail" class="liste_mail">
         <a id="listeMail"  href="#">
            {{msg.date}} <b>{{msg.expediteur}}</b> {{msg.message}}
         </a>
@@ -13,7 +13,7 @@
             <span class="croixgauche"></span>
             <span class="croixdroite"></span>
         </a>
-    </div>-->
+    </div>
     
 </template>
 
@@ -22,15 +22,9 @@
 
     export default {
     
-    
         name: 'message',
         props: ['msg'],
-        
-        methods: {
-            
-        }
 
-        
     }
 
 </script>
