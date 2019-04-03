@@ -20,7 +20,7 @@
             
             $prep->execute(array($_POST["dest"], $_POST['user'], $_POST["message"]));
 
-
+            
         ?>
         
         <script>

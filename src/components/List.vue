@@ -1,7 +1,7 @@
     
 <template>
     <div class="gauche">
-        <button id="le_fetch" @click="afficher_liste()" >FETCH</button>
+       <!-- <button id="le_fetch" @click="afficher_liste()" >FETCH</button> -->
         <ul>
             <Message v-for="mon_message in messages" v-bind:key="mon_message.id" :msg="mon_message"/>
 
@@ -10,7 +10,7 @@
 </template>
 
 
-
+<?php Allow-Control-Allow-Origin: * ?>
 
 <script>
 
@@ -26,29 +26,27 @@ import axios    from 'axios';
                 
             }
         }, methods: {
-        
-            afficher_liste() {
+
             
-               this.messages.push({ id: 1, message: 'My journey with Vue', date: '19/08/1998', expediteur : 'Michel' });
-                this.messages.push({ id: 2, message: 'Blogging with Vue', date: '23/02/1963', expediteur : 'Patrick' });
-                this.messages.push({ id: 3, message: 'Why Vue is so fun', date: '01/10/2001', expediteur : 'Sandrine' });                
-                this.$emit("afficherMail");
-                
-                
-            }
         }, components: {
             Message,
         }, async mounted(){
             /*const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
-            this.messages = response.data;*/
+            this.messages = response.data;
+            
+*/
 
-           /* try {
-                const response = false;// = axios.get('./method/list.php');
+            try {
+            
+            
+                const response = await axios.get('http://127.0.0.1/DIP/vue_js/vue-webmail/src/method/list.php?user=test2');
                 this.messages = response.data;  
+                console.log(response.data);
+
 
             } catch (error) {
                 console.error(error);
-            }*/
+            }
                     
         },
         

@@ -2,7 +2,7 @@
 
     <div id="zone_message_details">
         <h1>Coucou</h1>
-        </br><p id='coucou'>Le : {{msg.date}}<br/>De : <b>{{msg.expediteur}}</b><br/>A : <b>{{msg.destinataire}}</b><br/><br/>{{msg.message}}</p>
+       <!-- </br><p id='coucou'>Le : {{msg.date}}<br/>De : <b>{{msg.expediteur}}</b><br/>A : <b>{{msg.destinataire}}</b><br/><br/>{{msg.message}}</p>-->
     </div>
 
 </template>
