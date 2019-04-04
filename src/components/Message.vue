@@ -1,15 +1,10 @@
 <template>
 
-<!--
-    <li>
-        {{msg.id}} {{msg.title}}
-    </li>
-    -->
-    <div id="liste_mail" class="liste_mail">
+    <div id="liste_mail" class="liste_mail" @click="afficher_mail(msg.id)">
         <a id="listeMail"  href="#">
            {{msg.date}} <b>{{msg.expediteur}}</b> {{msg.message}}
         </a>
-        <a id="croix" href="#">
+        <a id="croix" href="#" @click="supprimer(msg.id)">
             <span class="croixgauche"></span>
             <span class="croixdroite"></span>
         </a>
@@ -20,10 +15,36 @@
 
 <script>
 
+    import axios    from 'axios';
+    import Message_details from './Message_details.vue';
+
+
     export default {
     
         name: 'message',
         props: ['msg'],
+        
+        methods: {
+            
+            afficher_mail(id) {
+            
+                //const response = axios.get('http://127.0.0.1/DIP/vue_js/vue-webmail/src/method/get.php?id='+id);
+                //this.messages = response.data;  
+                //console.log(response.data);
+                //   Message_details.prototype.$msg = this.message;
+                this.$emit('click', this.msg)
+            },
+            
+             supprimer(id) {
+            
+                const response = axios.get('http://127.0.0.1/DIP/vue_js/vue-webmail/src/method/supprimer.php?idSUP='+id);
+
+                this.$emit('supprimer', this.msg.destinataire);
+
+                           
+            }
+            
+        }
 
     }
 

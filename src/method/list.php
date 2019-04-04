@@ -5,6 +5,10 @@
 
 
 <?php 
+    header('Access-Control-Allow-Origin: *');
+    //Access-Control-Allow-Origin: *;
+    //Access-Control-Allow-Methods: "GET, PUT, POST, DELETE, HEAD, OPTIONS";
+
             
     //Info bases
     $dbhost = "localhost";
@@ -56,6 +60,8 @@
 
             $indice++;
         }
+        
+
         
         header("Content-type: application/json");
         echo json_encode($mail);

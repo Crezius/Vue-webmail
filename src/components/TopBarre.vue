@@ -1,7 +1,7 @@
 <template>
     <div class="top_bar">
-        <h1 id="id_user">Caramail 2 </h1>
-        <Connect/>
+        <h1 id="id_user">Caramail 2 : {{user}}</h1>
+        <Connect @connect="changeUser"/>
     </div>
 </template>
 
@@ -11,8 +11,20 @@
     import Connect from './Connect.vue'
 
     export default {
+
         components: {
             Connect,
+        }, methods: {
+            changeUser(user){
+                console.log(user);
+                this.user = user;
+                this.$emit('changeUser', user);
+            }
+        },
+        data() {
+            return {
+                user: "",
+            };
         }
     };
 

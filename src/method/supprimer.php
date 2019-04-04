@@ -1,5 +1,8 @@
 <?php 
-            
+        
+        header('Access-Control-Allow-Origin: *');
+
+
         //Info base
         $dbhost = "localhost";
         $dbuser = "me";

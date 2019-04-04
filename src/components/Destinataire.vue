@@ -1,10 +1,7 @@
 <template>
     
     <div id="select_destinataire">
-        <h3>Destinataire : </h3>
-        <form id="form_destinataire" method="get">
-            <input id="txt_destinataire" type="text" name="user" maxlength="20"/>
-        </form>
+        
     </div>
     
 </template>
@@ -15,6 +12,16 @@
 
     export default {
 
+        data() {
+            return {
+                destinataire: "",
+            };
+        },
+        watch: {
+            destinataire(destinataire){
+                $emit('mondestinataire', this.destinataire);
+            }
+        }
     
     }
 

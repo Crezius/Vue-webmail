@@ -3,10 +3,10 @@
 <template>
     
     <div>
-        <TopBarre/>
+        <TopBarre @changeUser="changeUser"/>
         <UnderTopBar/>
-        <List/>
-        <Message/>
+        <List :user="user" @showMsg="afficheMsg"/>
+        <Message :msg="msg"/>
     </div>
     
 </template>
@@ -28,6 +28,22 @@
         UnderTopBar,
         Message,
       },
+      
+       data(){
+            return {
+                user: "",
+                msg: {},
+            };
+        },
+        methods: {
+            changeUser(user){
+                this.user= user;
+            },
+            afficheMsg(msg){
+                this.msg= msg;
+                
+            }
+        }
         
     };
 
